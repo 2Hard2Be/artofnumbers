@@ -26,8 +26,8 @@ import java.util.EventListener;
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String[] UNIDADES = new String[] {"liter", "cubic meter", "gallon", "cubic centimeter",
-            "milliliter","liter","barrel","centiliter", "hectoliter"};
+    private static final String[] UNIDADES = new String[] {"l(liter)","m3(cubic_meter)","gal(gallon)","cm3(cubic_centimeter)"
+       ,"ml(milliliter)","cl(centiliter)","hl(hectoliter)","barrel"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,12 +104,14 @@ final Button botonigual = (Button)findViewById(R.id.botonaso);
             String informacion = textView.getText().toString();
             StringBuilder numeros = new StringBuilder();
             StringBuilder unidades = new StringBuilder();
+            StringBuilder unidadesto = new StringBuilder();
 
                 char[] texto = new char[informacion.length()];
                 informacion.getChars(0, informacion.length(),texto, 0 );
 
                 int i;
                 int ii;
+                int iii;
 
                 for (i = 0; i < texto.length; i++) {
                     if (texto[i] != ' ') {
@@ -118,20 +120,29 @@ final Button botonigual = (Button)findViewById(R.id.botonaso);
                     else {
 
                         ii = i+1;
-                        while (texto[ii] != ' '){
+                        while (texto[ii]!=' '){
 
                             unidades.append(texto[ii]).toString();
                             ii++;
                         }
+
+                        iii = ii+1;
+
+
+                        while (iii < texto.length) {
+                          unidadesto.append(texto[iii]).toString();
+                        iii++;
+                        }
+
+
                      break;
 
                 }
 
                 }
 
-
                 TextView resultado = (TextView)findViewById(R.id.resultado);
-                resultado.setText(numeros+" "+"con unidades"+" "+unidades);
+                resultado.setText(numeros+" "+unidades+" "+"convertir a:"+" "+unidadesto);
 
         }});
 
