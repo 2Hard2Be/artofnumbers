@@ -140,9 +140,17 @@ final Button botonigual = (Button)findViewById(R.id.botonaso);
                 }
 
                 }
+//AQUI PROBANDO EL MANEJO DE CIFRAS
+                String numero = numeros.toString();
+                String unidad = unidades.toString();
+                String unidadto = unidadesto.toString();
+
+                convertidor conversor = new convertidor(numero, unidad, unidadto);
+
+                String respuesta =  conversor.convierte(numero, unidad, unidadto);
 
                 TextView resultado = (TextView)findViewById(R.id.resultado);
-                resultado.setText(numeros+" "+unidades+" "+"convertir a:"+" "+unidadesto);
+                resultado.setText(numeros+" "+unidades+" "+"convertir a:"+" "+unidadesto+" "+respuesta);
 
         }});
 
