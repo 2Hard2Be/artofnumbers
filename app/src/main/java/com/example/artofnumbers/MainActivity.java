@@ -17,21 +17,25 @@ import android.os.Build;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.TextView;
 
 import java.util.EventListener;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String[] UNIDADES = new String[] {"liters", "m3", "gal", "cm3","ml","l","barrel","mass"};
+    private static final String[] UNIDADES = new String[] {"liter", "cubic meter", "gallon", "cubic centimeter",
+            "milliliter","liter","barrel","centiliter", "hectoliter"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//Atencion textView (multiautocompletext) es declarado final
 
-        MultiAutoCompleteTextView textView = (MultiAutoCompleteTextView)findViewById(R.id.auto);
+       final MultiAutoCompleteTextView textView = (MultiAutoCompleteTextView)findViewById(R.id.auto);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, UNIDADES);
 
 
@@ -93,8 +97,46 @@ public class MainActivity extends ActionBarActivity {
 
 
 
+final Button botonigual = (Button)findViewById(R.id.botonaso);
+        botonigual.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
 
-       String informacion = textView.getText().toString();
+            String informacion = textView.getText().toString();
+            StringBuilder numeros = new StringBuilder();
+            StringBuilder unidades = new StringBuilder();
+
+                char[] texto = new char[informacion.length()];
+                informacion.getChars(0, informacion.length(),texto, 0 );
+
+                int i;
+                int ii;
+
+                for (i = 0; i < texto.length; i++) {
+                    if (texto[i] != ' ') {
+                        numeros.append(texto[i]).toString();
+                    }
+                    else {
+
+                        ii = i+1;
+                        while (texto[ii] != ' '){
+
+                            unidades.append(texto[ii]).toString();
+                            ii++;
+                        }
+                     break;
+
+                }
+
+                }
+
+
+                TextView resultado = (TextView)findViewById(R.id.resultado);
+                resultado.setText(numeros+" "+"con unidades"+" "+unidades);
+
+        }});
+
+
+
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
