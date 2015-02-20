@@ -150,7 +150,7 @@ final Button botonigual = (Button)findViewById(R.id.botonaso);
                 String respuesta =  conversor.convierte(numero, unidad, unidadto);
 
                 TextView resultado = (TextView)findViewById(R.id.resultado);
-                resultado.setText(numeros+" "+unidades+" "+"convertir a:"+" "+unidadesto+" "+respuesta);
+                resultado.setText(numeros+" "+unidades+" "+"is equivalent to"+" "+respuesta+" "+unidadesto);
 
         }});
 

@@ -32,12 +32,10 @@ public convertidor (String vienecifra, String vieneunidad, String vieneunidadto)
       unidad = u;
       unidadto = uto;
 
-       Float numero = Float.valueOf(c);
+       Double numero = Double.valueOf(cifra);
 
-
-       Float respuestafloat = numero + 500;
-
-        String respuestastring = Float.toString(respuestafloat);
+       Volumen volumetrickey = new Volumen(numero,unidad,unidadto);
+       String respuestastring = volumetrickey.calculaUnVolumen(numero,unidad,unidadto);
 
 return respuestastring;
 
