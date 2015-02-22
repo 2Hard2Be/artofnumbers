@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -26,8 +27,8 @@ import java.util.EventListener;
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String[] UNIDADES = new String[] {"l(liter)","m3(cubic_meter)","gal(gallon)","cm3(cubic_centimeter)"
-       ,"ml(milliliter)","cl(centiliter)","hl(hectoliter)","barrel"};
+    private static final String[] UNIDADES = new String[] {"l(liter)","m3(cubic_meter)","gal(US_gallon)","cm3(cubic_centimeter)"
+       ,"ml(milliliter)","hl(hectoliter)","barrel(US)","ft3(cubic_foot)","in3(cubic inch)","microliter","oz(US_liquid_ounce)"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,12 +83,17 @@ public class MainActivity extends ActionBarActivity {
                     return text;
                 } else {
                     if (text instanceof Spanned) {
-                        SpannableString sp = new SpannableString(text + " ");
+
+//                        AQUI SE PUEDE MEJORAR A QUE SALGA AUTOMATICAMENTE EL ESPACIO Y NO SE DEBA ESCRIBIR
+
+                        SpannableStringBuilder sp = new SpannableStringBuilder(text);
                         TextUtils.copySpansFrom((Spanned) text, 0, text.length(),
                                 Object.class, sp, 0);
-                        return sp;
+                        String result = sp.toString();
+                        return result;
                     } else {
-                        return text + " ";
+                        String result2 = text.toString();
+                        return result2;
                     }
                 }
             }

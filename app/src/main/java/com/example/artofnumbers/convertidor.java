@@ -24,7 +24,7 @@ public convertidor (String vienecifra, String vieneunidad, String vieneunidadto)
 
 
 }
-//solo probando el metodo convierte, el 500 de abajo solo es prueba
+//Por el momento solo volumen, agregar switchboard para elegir entre unidades y dimensiones
 
     public String convierte (String c, String u, String uto ){
 
