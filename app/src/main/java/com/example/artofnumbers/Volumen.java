@@ -301,6 +301,160 @@ public class Volumen {
                         respuestan = Double.parseDouble(errorto);
                 }
                 break;
+            case "barrel(US)":
+            case "barrel":
+                switch (unidadesto) {
+                    case "l":
+                    case "l(liter)":
+                    case "lt":
+                        respuestan =  119.240471 * number;
+                        break;
+                    case "m3":
+                    case "m3(cubic_meter)":
+                        respuestan =   0.119240 * number;
+                        break;
+                    case "gal":
+                    case "gal(US_gallon)":
+                        respuestan = 31.500000 * number;
+                        break;
+                    case "cm3":
+                    case "cm3(cubic_centimeter)":
+                    case "ml":
+                    case "ml(milliliter)":
+                    case "cc":
+                        respuestan = 119240.4712 * number;
+                        break;
+                    case "hl(hectoliter)":
+                    case "hl":
+                        respuestan =   1.192404 * number;
+                        break;
+                    case "barrel(US)":
+                    case "barrel":
+                        respuestan =  1 * number;
+                        break;
+                    case "ft3(cubic_foot)":
+                    case "ft3":
+                        respuestan =    4.210937 * number;
+                        break;
+                    case "in3(cubic inch)":
+                    case "in3":
+                        respuestan =   7276.500000 * number;
+                        break;
+                    case "microliter":
+                    case "ul":
+                        respuestan =   119240471.2  * number;
+                        break;
+                    case "oz(US_liquid_ounce)":
+                    case "oz":
+                        respuestan =   4032.000000 * number;
+                        break;
+                    default:
+                        respuestan = Double.parseDouble(errorto);
+                }
+                break;
+
+            case "ft3(cubic_foot)":
+            case "ft3":
+                switch (unidadesto) {
+                    case "l":
+                    case "l(liter)":
+                    case "lt":
+                        respuestan =  28.316846 * number;
+                        break;
+                    case "m3":
+                    case "m3(cubic_meter)":
+                        respuestan =   0.028316 * number;
+                        break;
+                    case "gal":
+                    case "gal(US_gallon)":
+                        respuestan = 7.480519 * number;
+                        break;
+                    case "cm3":
+                    case "cm3(cubic_centimeter)":
+                    case "ml":
+                    case "ml(milliliter)":
+                    case "cc":
+                        respuestan = 28316.846592 * number;
+                        break;
+                    case "hl(hectoliter)":
+                    case "hl":
+                        respuestan =   0.283168 * number;
+                        break;
+                    case "barrel(US)":
+                    case "barrel":
+                        respuestan =  0.237476 * number;
+                        break;
+                    case "ft3(cubic_foot)":
+                    case "ft3":
+                        respuestan =    1 * number;
+                        break;
+                    case "in3(cubic inch)":
+                    case "in3":
+                        respuestan =   1728.000 * number;
+                        break;
+                    case "microliter":
+                    case "ul":
+                        respuestan =   28316846.592  * number;
+                        break;
+                    case "oz(US_liquid_ounce)":
+                    case "oz":
+                        respuestan =    957.506493 * number;
+                        break;
+                    default:
+                        respuestan = Double.parseDouble(errorto);
+                }
+                break;
+            case "in3(cubic inch)":
+            case "in3":
+                switch (unidadesto) {
+                    case "l":
+                    case "l(liter)":
+                    case "lt":
+                        respuestan =  0.016387 * number;
+                        break;
+                    case "m3":
+                    case "m3(cubic_meter)":
+                        respuestan =   0.000016 * number;
+                        break;
+                    case "gal":
+                    case "gal(US_gallon)":
+                        respuestan =  0.004329 * number;
+                        break;
+                    case "cm3":
+                    case "cm3(cubic_centimeter)":
+                    case "ml":
+                    case "ml(milliliter)":
+                    case "cc":
+                        respuestan = 16.387064 * number;
+                        break;
+                    case "hl(hectoliter)":
+                    case "hl":
+                        respuestan =    0.000163 * number;
+                        break;
+                    case "barrel(US)":
+                    case "barrel":
+                        respuestan =  0.000137 * number;
+                        break;
+                    case "ft3(cubic_foot)":
+                    case "ft3":
+                        respuestan =     0.000578 * number;
+                        break;
+                    case "in3(cubic inch)":
+                    case "in3":
+                        respuestan =   1 * number;
+                        break;
+                    case "microliter":
+                    case "ul":
+                        respuestan =   16387.064  * number;
+                        break;
+                    case "oz(US_liquid_ounce)":
+                    case "oz":
+                        respuestan =   0.554112 * number;
+                        break;
+                    default:
+                        respuestan = Double.parseDouble(errorto);
+                }
+                break;
             default:
                 respuestan = Double.parseDouble(errorunits);
 
