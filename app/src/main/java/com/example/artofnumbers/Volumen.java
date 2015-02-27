@@ -404,6 +404,7 @@ public class Volumen {
                         respuestan = Double.parseDouble(errorto);
                 }
                 break;
+
             case "in3(cubic inch)":
             case "in3":
                 switch (unidadesto) {
@@ -450,6 +451,108 @@ public class Volumen {
                     case "oz(US_liquid_ounce)":
                     case "oz":
                         respuestan =   0.554112 * number;
+                        break;
+                    default:
+                        respuestan = Double.parseDouble(errorto);
+                }
+                break;
+            case "microliter":
+            case "ul":
+                switch (unidadesto) {
+                    case "l":
+                    case "l(liter)":
+                    case "lt":
+                        respuestan =   0.000001 * number;
+                        break;
+                    case "m3":
+                    case "m3(cubic_meter)":
+                        respuestan =   1.0e-9 * number;
+                        break;
+                    case "gal":
+                    case "gal(US_gallon)":
+                        respuestan =  2.6417205236e-7 * number;
+                        break;
+                    case "cm3":
+                    case "cm3(cubic_centimeter)":
+                    case "ml":
+                    case "ml(milliliter)":
+                    case "cc":
+                        respuestan = 0.001 * number;
+                        break;
+                    case "hl(hectoliter)":
+                    case "hl":
+                        respuestan =     1.0e-8 * number;
+                        break;
+                    case "barrel(US)":
+                    case "barrel":
+                        respuestan =  8.3864143603e-9 * number;
+                        break;
+                    case "ft3(cubic_foot)":
+                    case "ft3":
+                        respuestan =     3.5314666721e-8 * number;
+                        break;
+                    case "in3(cubic inch)":
+                    case "in3":
+                        respuestan =   0.0000610 * number;
+                        break;
+                    case "microliter":
+                    case "ul":
+                        respuestan =   1  * number;
+                        break;
+                    case "oz(US_liquid_ounce)":
+                    case "oz":
+                        respuestan =    0.000033814 * number;
+                        break;
+                    default:
+                        respuestan = Double.parseDouble(errorto);
+                }
+                break;
+            case "oz(US_liquid_ounce)":
+            case "oz":
+                switch (unidadesto) {
+                    case "l":
+                    case "l(liter)":
+                    case "lt":
+                        respuestan =    0.029573 * number;
+                        break;
+                    case "m3":
+                    case "m3(cubic_meter)":
+                        respuestan =    0.000029 * number;
+                        break;
+                    case "gal":
+                    case "gal(US_gallon)":
+                        respuestan =   0.007812 * number;
+                        break;
+                    case "cm3":
+                    case "cm3(cubic_centimeter)":
+                    case "ml":
+                    case "ml(milliliter)":
+                    case "cc":
+                        respuestan =  29.573529 * number;
+                        break;
+                    case "hl(hectoliter)":
+                    case "hl":
+                        respuestan =      0.000295 * number;
+                        break;
+                    case "barrel(US)":
+                    case "barrel":
+                        respuestan =  0.000248 * number;
+                        break;
+                    case "ft3(cubic_foot)":
+                    case "ft3":
+                        respuestan =      0.001044 * number;
+                        break;
+                    case "in3(cubic inch)":
+                    case "in3":
+                        respuestan =    1.804687 * number;
+                        break;
+                    case "microliter":
+                    case "ul":
+                        respuestan =    29573.529563  * number;
+                        break;
+                    case "oz(US_liquid_ounce)":
+                    case "oz":
+                        respuestan =    1 * number;
                         break;
                     default:
                         respuestan = Double.parseDouble(errorto);
