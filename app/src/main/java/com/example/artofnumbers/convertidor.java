@@ -43,7 +43,7 @@ public class convertidor {
         Double numero = Double.valueOf(cifra);
 
         switch (unidad) {
-
+//    volumen
             case "l":
             case "l(liter)":
             case "lt":
@@ -70,15 +70,45 @@ public class convertidor {
             case "oz":
 
 //                HashSet contine los parametros para evaluar las unidades to
-                  final Set<String> values = new HashSet<String>(Arrays.asList("l","l(liter)","lt","m3","m3(cubic_meter)",
+                  final Set<String> valuesv = new HashSet<String>(Arrays.asList("l","l(liter)","lt","m3","m3(cubic_meter)",
                           "gal","gal(US_gallon)","cm3","cm3(cubic_centimeter)","ml","ml(milliliter)","cc","hl(hectoliter)",
                           "hl","barrel(US)","barrel","ft3(cubic_foot)","ft3","in3(cubicinch)","in3","microliter","ul",
                           "oz(US_liquid_ounce)","oz"));
 
-                if (values.contains(unidadto)) {
+                if (valuesv.contains(unidadto)) {
 
                     Volumen volumetrickey = new Volumen(numero, unidad, unidadto);
                     respuestastring = volumetrickey.calculaUnVolumen(numero, unidad, unidadto);
+
+                } else {
+                    respuestastring = "Unknown units to convert";
+                }
+                break;
+//      MASA
+            case "g(gram)":
+            case "gm":
+            case "g":
+            case "kg(kilogram)":
+            case "kg":
+            case "lb":
+            case "lbs":
+            case "lb(pound)":
+            case "ton(metric_ton)":
+            case "ton":
+            case "mg(milligram)":
+            case "ounce":
+            case "mg":
+
+
+//                HashSet contine los parametros para evaluar las unidades to
+                final Set<String> valuesm = new HashSet<String>(Arrays.asList("g(gram)","gm","g","kg(kilogram)","kg","lb","lbs",
+                        "lb(pound)","ton","mg",
+                        "ton(metric_ton)","mg(milligram)","ounce"));
+
+                if (valuesm.contains(unidadto)) {
+
+                    Mass masstrickey = new Mass(numero, unidad, unidadto);
+                    respuestastring = masstrickey.calculaUnaMasa(numero, unidad, unidadto);
 
                 } else {
                     respuestastring = "Unknown units to convert";

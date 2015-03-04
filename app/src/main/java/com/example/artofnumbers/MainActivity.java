@@ -28,7 +28,9 @@ import java.util.EventListener;
 public class MainActivity extends ActionBarActivity {
 
     private static final String[] UNIDADES = new String[] {"l(liter)","m3(cubic_meter)","gal(US_gallon)","cm3(cubic_centimeter)"
-       ,"ml(milliliter)","hl(hectoliter)","barrel(US)","ft3(cubic_foot)","in3(cubic inch)","microliter","oz(US_liquid_ounce)"};
+       ,"ml(milliliter)","hl(hectoliter)","barrel(US)","ft3(cubic_foot)","in3(cubic inch)","microliter","oz(US_liquid_ounce)",
+
+    "g(gram)","kg(kilogram)", "lb(pound)","ton(metric_ton)","mg(milligram)","ounce"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
