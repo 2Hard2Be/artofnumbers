@@ -114,6 +114,43 @@ public class convertidor {
                     respuestastring = "Unknown units to convert";
                 }
                 break;
+//      LONGITUD
+
+            case "cm(centimeter)":
+            case "cm":
+            case "ft(feet)":
+            case "ft":
+            case "in(inch)":
+            case "in":
+            case "km(kilometer)":
+            case "km":
+            case "m(meter)":
+            case "m":
+            case "mi(mile)":
+            case "mi":
+            case "mile":
+            case "miles":
+            case "mm(millimeter)":
+            case "mm":
+            case "yd(yard)":
+            case "yd":
+
+
+//                HashSet contine los parametros para evaluar las unidades to
+                final Set<String> valuesl = new HashSet<String>(Arrays.asList("cm(centimeter)","cm",
+                        "ft(feet)","ft","in(inch)","in","km(kilometer)","km","m(meter)","m",
+                        "mi(mile)","mi","mile","miles","mm(millimeter)","mm","yd(yard)","yd"));
+
+                if (valuesl.contains(unidadto)) {
+
+                    Longitud longitudtrickey = new Longitud(numero, unidad, unidadto);
+                    respuestastring = longitudtrickey.calculaUnaLongitud(numero, unidad, unidadto);
+
+                } else {
+                    respuestastring = "Unknown units to convert";
+                }
+                break;
+
 
             default:
 

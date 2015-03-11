@@ -66,8 +66,11 @@ public class Longitud {
                     case "m":
                         respuestan = 0.01 * number;
                         break;
+
                     case "mi(mile)":
                     case "mi":
+                    case "mile":
+                    case "miles":
 
                         respuestan =   0.0000062 * number;
                         break;
@@ -122,6 +125,8 @@ public class Longitud {
                         break;
                     case "mi(mile)":
                     case "mi":
+                    case "mile":
+                    case "miles":
 
                         respuestan =   0.000189393 * number;
                         break;
@@ -176,6 +181,8 @@ public class Longitud {
                         break;
                     case "mi(mile)":
                     case "mi":
+                    case "mile":
+                    case "miles":
 
                         respuestan =    0.000015782 * number;
                         break;
@@ -230,6 +237,8 @@ public class Longitud {
                         break;
                     case "mi(mile)":
                     case "mi":
+                    case "mile":
+                    case "miles":
 
                         respuestan =     0.621371192 * number;
                         break;
@@ -284,6 +293,8 @@ public class Longitud {
                         break;
                     case "mi(mile)":
                     case "mi":
+                    case "mile":
+                    case "miles":
 
                         respuestan = 0.000621371 * number;
                         break;
@@ -305,114 +316,57 @@ public class Longitud {
 
                 }
                 break;
-//Aqui voy
-            case "kg(kilogram)":
-            case "kg":
+
+            case "mi(mile)":
+            case "mi":
+            case "mile":
+            case "miles":
+
                 switch (unidadesto) {
-                    case "g(gram)":
-                    case "gm":
-                    case "g":
-                        respuestan = 1000 * number;
+                    case "cm(centimeter)":
+                    case "cm":
+
+                        respuestan = 160934.4 * number;
                         break;
 
-                    case "kg(kilogram)":
-                    case "kg":
-                        respuestan =  1 * number;
-                        break;
-                    case "lb(pound)":
-                    case "lb":
-                    case "lbs":
-                        respuestan = 2.204622 * number;
-                        break;
-                    case "ton(metric_ton)":
-                    case "ton":
-
-                        respuestan = 0.001 * number;
-                        break;
-                    case "mg(milligram)":
-                    case "mg":
-                        respuestan = 1000000 * number;
-                        break;
-                    case "ounce":
-
-                        respuestan =  35.273961 * number;
+                    case "ft(feet)":
+                    case "ft":
+                        respuestan =   5280  * number;
                         break;
 
-                    default:
-                        respuestan = Double.parseDouble(errorto);
 
-                }
-                break;
-
-            case "lb(pound)":
-            case "lb":
-            case "lbs":
-                switch (unidadesto) {
-                    case "g(gram)":
-                    case "gm":
-                    case "g":
-                        respuestan = 453.59237 * number;
+                    case "in(inch)":
+                    case "in":
+                        respuestan =   63360 * number;
                         break;
 
-                    case "kg(kilogram)":
-                    case "kg":
-                        respuestan =  0.453592 * number;
+                    case "km(kilometer)":
+                    case "km":
+
+                        respuestan =  1.609344 * number;
                         break;
-                    case "lb(pound)":
-                    case "lb":
-                    case "lbs":
+                    case "m(meter)":
+                    case "m":
+                        respuestan = 1609.344 * number;
+                        break;
+                    case "mi(mile)":
+                    case "mi":
+                    case "mile":
+                    case "miles":
+
                         respuestan = 1 * number;
                         break;
-                    case "ton(metric_ton)":
-                    case "ton":
 
-                        respuestan =  0.000453 * number;
-                        break;
-                    case "mg(milligram)":
-                    case "mg":
-                        respuestan = 453592.37 * number;
-                        break;
-                    case "ounce":
+                    case "mm(millimeter)":
+                    case "mm":
 
-                        respuestan =  16 * number;
+                        respuestan =   1609344 * number;
                         break;
 
-                    default:
-                        respuestan = Double.parseDouble(errorto);
+                    case "yd(yard)":
+                    case "yd":
 
-                }
-                break;
-
-            case "ton(metric_ton)":
-            case "ton":
-                switch (unidadesto) {
-                    case "g(gram)":
-                    case "gm":
-                    case "g":
-                        respuestan = 1000000 * number;
-                        break;
-
-                    case "kg(kilogram)":
-                    case "kg":
-                        respuestan =  1000 * number;
-                        break;
-                    case "lb(pound)":
-                    case "lb":
-                    case "lbs":
-                        respuestan = 2204.622621 * number;
-                        break;
-                    case "ton(metric_ton)":
-                    case "ton":
-
-                        respuestan =  1 * number;
-                        break;
-                    case "mg(milligram)":
-                    case "mg":
-                        respuestan = 1000000000 * number;
-                        break;
-                    case "ounce":
-
-                        respuestan =  35273.961 * number;
+                        respuestan = 1760 * number;
                         break;
 
                     default:
@@ -421,36 +375,54 @@ public class Longitud {
                 }
                 break;
 
-            case "mg(milligram)":
-            case "mg":
+            case "mm(millimeter)":
+            case "mm":
+
                 switch (unidadesto) {
-                    case "g(gram)":
-                    case "gm":
-                    case "g":
-                        respuestan = 0.001 * number;
+                    case "cm(centimeter)":
+                    case "cm":
+
+                        respuestan = 0.1 * number;
                         break;
 
-                    case "kg(kilogram)":
-                    case "kg":
+                    case "ft(feet)":
+                    case "ft":
+                        respuestan =   0.003280839  * number;
+                        break;
+
+
+                    case "in(inch)":
+                    case "in":
+                        respuestan =   0.039370078 * number;
+                        break;
+
+                    case "km(kilometer)":
+                    case "km":
+
                         respuestan =   0.000001 * number;
                         break;
-                    case "lb(pound)":
-                    case "lb":
-                    case "lbs":
-                        respuestan = 0.000002204 * number;
+                    case "m(meter)":
+                    case "m":
+                        respuestan = 0.001 * number;
                         break;
-                    case "ton(metric_ton)":
-                    case "ton":
+                    case "mi(mile)":
+                    case "mi":
+                    case "mile":
+                    case "miles":
 
-                        respuestan =  1.0e-9 * number;
+                        respuestan = 6.2137119224e-7 * number;
                         break;
-                    case "mg(milligram)":
-                    case "mg":
-                        respuestan = 1 * number;
-                        break;
-                    case "ounce":
 
-                        respuestan =  0.000035274 * number;
+                    case "mm(millimeter)":
+                    case "mm":
+
+                        respuestan =   1 * number;
+                        break;
+
+                    case "yd(yard)":
+                    case "yd":
+
+                        respuestan =  0.001093613 * number;
                         break;
 
                     default:
@@ -459,34 +431,52 @@ public class Longitud {
                 }
                 break;
 
-            case "ounce":
+            case "yd(yard)":
+            case "yd":
 
                 switch (unidadesto) {
-                    case "g(gram)":
-                    case "gm":
-                    case "g":
-                        respuestan =  28.349523 * number;
+                    case "cm(centimeter)":
+                    case "cm":
+
+                        respuestan = 91.44 * number;
                         break;
 
-                    case "kg(kilogram)":
-                    case "kg":
-                        respuestan =    0.028349 * number;
+                    case "ft(feet)":
+                    case "ft":
+                        respuestan =   3  * number;
                         break;
-                    case "lb(pound)":
-                    case "lb":
-                    case "lbs":
-                        respuestan = 0.0625 * number;
-                        break;
-                    case "ton(metric_ton)":
-                    case "ton":
 
-                        respuestan =  0.000028 * number;
+
+                    case "in(inch)":
+                    case "in":
+                        respuestan =   36 * number;
                         break;
-                    case "mg(milligram)":
-                    case "mg":
-                        respuestan = 28349.523125 * number;
+
+                    case "km(kilometer)":
+                    case "km":
+
+                        respuestan =   0.0009144 * number;
                         break;
-                    case "ounce":
+                    case "m(meter)":
+                    case "m":
+                        respuestan = 0.9144 * number;
+                        break;
+                    case "mi(mile)":
+                    case "mi":
+                    case "mile":
+                    case "miles":
+
+                        respuestan =  0.000568181 * number;
+                        break;
+
+                    case "mm(millimeter)":
+                    case "mm":
+
+                        respuestan =   914.4 * number;
+                        break;
+
+                    case "yd(yard)":
+                    case "yd":
 
                         respuestan =  1 * number;
                         break;
@@ -496,6 +486,7 @@ public class Longitud {
 
                 }
                 break;
+
 
 
             default:
