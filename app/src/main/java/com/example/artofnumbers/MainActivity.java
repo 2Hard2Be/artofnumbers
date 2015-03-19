@@ -27,12 +27,17 @@ import java.util.EventListener;
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String[] UNIDADES = new String[] {"l(liter)","m3(cubic_meter)","gal(US_gallon)","cm3(cubic_centimeter)"
-       ,"ml(milliliter)","hl(hectoliter)","barrel(US)","ft3(cubic_foot)","in3(cubic inch)","microliter","oz(US_liquid_ounce)",
+    private static final String[] UNIDADES = new String[] {
+
+            "l(liter)","m3(cubic_meter)","gal(US_gallon)","cm3(cubic_centimeter)"
+       ,"ml(milliliter)","hl(hectoliter)","barrel(US)","ft3(cubic_foot)",
+            "in3(cubic inch)","microliter","oz(US_liquid_ounce)",
 
     "g(gram)","kg(kilogram)", "lb(pound)","ton(metric_ton)","mg(milligram)","ounce",
 
-    "cm(centimeter)","ft(feet)","in(inch)", "km(kilometer)", "m(meter)", "mi(mile)", "mm(millimeter)", "yd(yard)"};
+    "cm(centimeter)","ft(feet)","in(inch)", "km(kilometer)", "m(meter)", "mi(mile)", "mm(millimeter)", "yd(yard)",
+
+    "hp(horsepower_international)","kW(kilowatt)","W(Watt)","ton(refrigeration)"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

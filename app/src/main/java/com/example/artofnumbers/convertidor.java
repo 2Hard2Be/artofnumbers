@@ -151,11 +151,43 @@ public class convertidor {
                 }
                 break;
 
+//        POTENCIA
 
+
+            case  "hp(horsepower_international)":
+            case "hp":
+            case "kW(kilowatt)":
+            case "kw":
+            case "kW":
+            case "Watt":
+            case "W(Watt)":
+            case "W":
+            case "w":
+            case "ton(refrigeration)":
+
+
+//                HashSet contine los parametros para evaluar las unidades to
+                final Set<String> valuespower = new HashSet<String>(Arrays.asList("hp(horsepower_international)","hp",
+                        "kW(kilowatt)",
+                        "kw","kW","Watt","W(Watt)","W","w","ton(refrigeration)"));
+
+                if (valuespower.contains(unidadto)) {
+
+                    Potencia potenciatrickey = new Potencia(numero, unidad, unidadto);
+                    respuestastring = potenciatrickey.calculaUnaPotencia(numero, unidad, unidadto);
+
+                } else {
+                    respuestastring = "Unknown units to convert";
+                }
+                break;
             default:
 
                 respuestastring =  "Unknown units";
         }
+
+
+
+
 
 //Evaluar si conviene mejor colocar aqui las respuestas del string como y no en main para que tenga
 //        versatilidad en el texto resultado
